@@ -27,4 +27,4 @@ global.puml
 scenario.txt
 sources.txt
 *.pdf
-+.png
+*.png
