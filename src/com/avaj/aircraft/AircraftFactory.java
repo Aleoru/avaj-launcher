@@ -3,15 +3,19 @@ package com.avaj.aircraft;
 /**
  * Factory class to create new aircraft.
  */
-public class AircarftFactory {
-	private static AircarftFactory factory = new AircarftFactory();
+public class AircraftFactory {
+	private static AircraftFactory factory = new AircraftFactory();
 
-	priate static long idCounter = 0;
+	private static long idCounter = 0;
 
-	private AircarftFactory() {}
+	private AircraftFactory() {}
 
-	public static AircarftFactory getFactory() {
-		return this.factory;
+	public static AircraftFactory getFactory() {
+		return AircraftFactory.factory;
+	}
+
+	public Coordinates Coordinates(int longitude, int latitude, int height) {
+		return new Coordinates(longitude, latitude, height);
 	}
 
 	/**
@@ -26,12 +30,11 @@ public class AircarftFactory {
 			case "Helicopter":
 				return new Helicopter(idCounter++, p_name, p_coordinates);
 			case "JetPlane":
-				return new JetPlane(idCounter++, p_name, p_coordinates);
+				return new Jetplane(idCounter++, p_name, p_coordinates);
 			case "Baloon":
 				return new Baloon(idCounter++, p_name, p_coordinates);
 			default:
 				return null;
 		}
-		return null;
 	}
 }

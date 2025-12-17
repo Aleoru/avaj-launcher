@@ -19,10 +19,11 @@ public class Simulator {
 		try {
 			BufferedReader reader = new BufferedReader(new FileReader(args[0]));
 			String line = reader.readLine();
+			int simulations = 0;
 
 			if (line != null) {
 				weatherTower = new WeatherTower();
-				int simulations = Integer.parseInt(line.split(" ")[0]);
+				simulations = Integer.parseInt(line.split(" ")[0]);
 
 				if (simulations < 0) {
 					System.out.println("Invalid simulations count: " + simulations);
@@ -61,8 +62,8 @@ public class Simulator {
 			int latitude = Integer.parseInt(parts[3]);
 			int height = Integer.parseInt(parts[4]);
 
-			Coordinates coordinates = new Coordinates(longitude, latitude, height);
-			return AircraftFactory.getFactory().newAircraft(type, name, coordinates);
+			Coordinates coords = AircraftFactory.getFactory().Coordinates(longitude, latitude, height);
+			return AircraftFactory.getFactory().newAircraft(type, name, coords);
 
 		} catch (Exception e) {
 			System.out.println("Error: " + e.getMessage());
