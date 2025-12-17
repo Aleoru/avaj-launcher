@@ -1,5 +1,6 @@
 package com.avaj.weather;
 import com.avaj.aircraft.Coordinates;
+import java.util.Random;
 
 /**
  * Singleton WeatherProvider. Provides the weather based on the coordinates.
@@ -22,8 +23,9 @@ public class WeatherProvider {
 	 */
 	public String getCurrentWeather(Coordinates p_coordinates){
 		int seed = p_coordinates.getLongitude() + p_coordinates.getLatitude() + p_coordinates.getHeight();
-
-		int index = (seed + p_coordinates.getHeight()) % 4;
+ 
+		Random random = new Random(seed);
+		int index = random.nextInt(4);
 
 		if (index < 0) {
 			index += 4;
