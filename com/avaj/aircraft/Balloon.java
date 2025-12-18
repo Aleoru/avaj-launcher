@@ -3,14 +3,14 @@ package com.avaj.aircraft;
 /**
  * Baloon class extends from Aircraft abstract class.
  */
-public class Baloon extends Aircraft {
+public class Balloon extends Aircraft {
 	/**
 	 * Constructs a Baloon with the following attributes.
 	 * @param p_id Unique ID for the Aircraft.
 	 * @param p_name Name of the Baloon.
 	 * @param p_coordinate Actual coordinates of the Baloon.
 	 */
-	public Baloon(long p_id, String p_name, Coordinates p_coordinate) {
+	public Balloon(long p_id, String p_name, Coordinates p_coordinate) {
 		super(p_id, p_name, p_coordinate);
 	}
 
@@ -42,11 +42,11 @@ public class Baloon extends Aircraft {
 				break;
 		}
 		
-		this.coordinates.update(lonChange, latChange, heightChange);
-		System.out.println("Baloon#" + this.name + "(" + this.id + "): " + message);
+		this.coordinates = this.coordinates.update(lonChange, latChange, heightChange);
+		System.out.println("Balloon#" + this.name + "(" + this.id + "): " + message);
 
 		if (this.coordinates.getHeight() <= 0) {
-			System.out.println("Baloon#" + this.name + "(" + this.id + ") landing.");
+			System.out.println("Balloon#" + this.name + "(" + this.id + ") landing.");
 			this.weatherTower.unregister(this);
 		}
 	}

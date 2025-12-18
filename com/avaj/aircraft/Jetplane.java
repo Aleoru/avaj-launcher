@@ -42,7 +42,7 @@ public class Jetplane extends Aircraft {
 				break;
 		}
 
-		this.coordinates.update(lonChange, latChange, heightChange);
+		this.coordinates = this.coordinates.update(lonChange, latChange, heightChange);
 		System.out.println("JetPlane#" + this.name + "(" + this.id + "): " + message);
 
 		if (this.coordinates.getHeight() <= 0) {
