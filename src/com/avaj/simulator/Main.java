@@ -1,4 +1,4 @@
-package com.avajlauncher.simulator;
+package com.avaj.simulator;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.util.Scanner;
