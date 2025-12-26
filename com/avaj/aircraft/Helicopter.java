@@ -27,7 +27,7 @@ public class Helicopter extends Aircraft {
 			case "SUN":
 				lonChange = 10;
 				heightChange = -2;
-				message = "Sunny sunny, can't see nothing.";
+				message = "Gonna need sunglasses to keep going.";
 				break;
 			case "RAIN":
 				lonChange = 5;

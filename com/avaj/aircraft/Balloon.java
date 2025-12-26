@@ -26,19 +26,19 @@ public class Balloon extends Aircraft {
 			case "SUN":
 				lonChange = 2;
 				heightChange = 4;
-				message = "Sunny";
+				message = "So sunny that could burn my skin.";
 				break;
 			case "RAIN":
 				heightChange = -5;
-				message = "Rainy";
+				message = "This rain is making me gain weight.";
 				break;
 			case "FOG":
 				heightChange = -3;
-				message = "Foggy";
+				message = "Can barely see anything with this fog.";
 				break;
 			case "SNOW":
 				heightChange = -15;
-				message = "Snowy";
+				message = "With this cold snow my flame is going to go out.";
 				break;
 		}
 		

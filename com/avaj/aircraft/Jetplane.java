@@ -26,19 +26,19 @@ public class Jetplane extends Aircraft {
 			case "SUN":
 				latChange = 10;
 				heightChange = 2;
-				message = "Sunny";
+				message = "Sunny sunny, can't see nothing.";
 				break;
 			case "RAIN":
 				latChange = 5;
-				message = "Rainy";
+				message = "Everything is gonna be wet with this rain.";
 				break;
 			case "FOG":
 				latChange = 1;
-				message = "Foggy";
+				message = "This foggy wants to be my enemy.";
 				break;
 			case "SNOW":
 				heightChange = -7;
-				message = "Snowy";
+				message = "Wishing to build a snowman instead of flight right now.";
 				break;
 		}
 
